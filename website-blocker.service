@@ -1,0 +1,14 @@
+[Unit]
+Description=A python script which blocks users from viewing blocked webistes based on the username
+
+[Service]
+Type=oneshot
+WorkingDirectory=/app/blocker
+ExecStart=/usr/bin/python3 main.py
+
+User=root
+Group=root
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
